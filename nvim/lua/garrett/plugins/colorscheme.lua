@@ -10,7 +10,7 @@ return {
 		name = "rose-pine",
 		-- lazy = false,
 		-- priority = 1000,
-		enabled = false,
+		enabled = true,
 		opts = {
 			variant = "main",
 			dark_variant = "main",
@@ -106,7 +106,6 @@ return {
 			})
 		end,
 	},
-
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
@@ -115,7 +114,6 @@ return {
 				flavour = "mocha",
 				background = { light = "latte", dark = "mocha" },
 				transparent_background = true,
-				enabled = true,
 				integrations = {
 					cmp = true,
 					gitsigns = true,
@@ -126,6 +124,7 @@ return {
 					mini = true,
 					noice = true,
 					notify = true,
+					-- nvimtree = true,
 					rainbow_delimiters = true,
 					telescope = true,
 					treesitter_context = true,
@@ -133,7 +132,8 @@ return {
 					which_key = true,
 				},
 			})
-			vim.opt.guicursor = "n-v-c-i-ci-ve-sm-r-cr:o:ver25" -- Ensure this setting is applied after setup
+			vim.opt.guicursor = ""
+			vim.cmd([[colorscheme catppuccin ]])
 		end,
 	},
 }
